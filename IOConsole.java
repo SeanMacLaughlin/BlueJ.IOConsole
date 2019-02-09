@@ -32,6 +32,7 @@ public class IOConsole {
      */
     public void print(String val, Object... args) {
         out.format(val, args);
+        
     }
 
     /**
@@ -39,6 +40,8 @@ public class IOConsole {
      * @param args : optional arguments to send for string formatting
      */
     public void println(String val, Object... args) {
+        out.format(val + "%n", args);
+        
     }
 
     /**
@@ -47,7 +50,10 @@ public class IOConsole {
      * @return user's input as String
      */
     public String getStringInput(String prompt, Object... args) {
-        return null;
+        System.out.println(prompt);
+        String input = scanner.nextLine();
+        
+        return input;
     }
 
     /**
@@ -56,7 +62,9 @@ public class IOConsole {
      * @return user's input as integer
      */
     public Integer getIntegerInput(String prompt, Object... args) {
-        return null;
+        System.out.println(prompt);
+        int input = scanner.nextInt();
+        return input;
     }
 
     /**
@@ -65,16 +73,20 @@ public class IOConsole {
      * @return user's input as double
      */
     public Double getDoubleInput(String prompt, Object... args) {
-        return null;
+        System.out.println(prompt);
+        double dubs = scanner.nextDouble();
+        return dubs;
     }
 
     /**
      * @param prompt : text to display to user
      * @param args   : optional arguments to send for string formatting
-     * @return user's input as float
-     */
+     */ // @return user's input as float
+     
     public Float getFloatInput(String prompt, Object... args) {
-        return null;
+        System.out.println(prompt);
+        float flow = scanner.nextFloat();
+        return flow;
     }
 
     /**
@@ -83,6 +95,8 @@ public class IOConsole {
      * @return user's input as long
      */
     public Long getLongInput(String prompt, Object... args) {
-        return null;
+        System.out.println(prompt);
+        long goLong = scanner.nextLong();
+        return goLong;
     }
 }

@@ -55,7 +55,7 @@ public class GetStringInputTest {
         String actual = console.getStringInput("");
 
         // Then
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     private IOConsole getConsoleWithBufferedInput(String inputString) {
